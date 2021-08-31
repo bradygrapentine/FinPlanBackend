@@ -31,6 +31,9 @@ namespace FinPlanBackend.Migrations
                     b.Property<double>("Cash")
                         .HasColumnType("double precision");
 
+                    b.Property<string>("Choice")
+                        .HasColumnType("text");
+
                     b.Property<double>("Debt")
                         .HasColumnType("double precision");
 

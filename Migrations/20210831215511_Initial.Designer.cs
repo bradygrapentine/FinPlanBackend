@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FinPlanBackend.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210831205612_Initial")]
+    [Migration("20210831215511_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace FinPlanBackend.Migrations
 
                     b.Property<double>("Cash")
                         .HasColumnType("double precision");
+
+                    b.Property<string>("Choice")
+                        .HasColumnType("text");
 
                     b.Property<double>("Debt")
                         .HasColumnType("double precision");

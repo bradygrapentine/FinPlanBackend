@@ -19,7 +19,8 @@ namespace FinPlanBackend.Migrations
                     Password = table.Column<string>(type: "text", nullable: true),
                     Cash = table.Column<double>(type: "double precision", nullable: false),
                     Debt = table.Column<double>(type: "double precision", nullable: false),
-                    Username = table.Column<string>(type: "text", nullable: true)
+                    Username = table.Column<string>(type: "text", nullable: true),
+                    Choice = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {

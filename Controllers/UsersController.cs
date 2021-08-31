@@ -35,9 +35,29 @@ namespace FinPlanBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        public async Task<IActionResult> PutUser(int id, User user, string choice)
         {
             if (id != user.Id)
+            {
+                return BadRequest();
+            }
+
+            if (choice == "college")
+            {
+                user.Choice = "college";
+                user.Debt = 50000;
+            }
+            else if (choice == "trade")
+            {
+                user.Choice = "trade";
+                user.Debt = 10000;
+            }
+            else if (choice == "job")
+            {
+                user.Choice = "job";
+                user.Cash = 50000;
+            }
+            else
             {
                 return BadRequest();
             }

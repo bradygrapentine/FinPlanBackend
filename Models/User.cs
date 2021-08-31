@@ -19,7 +19,16 @@ namespace FinPlanBackend.Models
 
         public double Debt { get; set; }
 
+        private double _netWorth = 0;
+
+        public double NetWorth
+        {
+            get { return Cash - Debt; }
+        }
+
         public string Username { get; set; }
+
+        public string Choice { get; set; }
     }
 }
 
